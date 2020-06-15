@@ -1,0 +1,15 @@
+## Geral
+	1. Topo: Deverá trazer a foto de perfil de um usuário do endpoint GET /api/1/profile/:id
+	2. Busca: Deverá ser capaz de pesquisar por nome ou e-mail os registros através do endpoint GET /api/1/users
+	3. Menu: Deverá conter os menus Painel, Configurações e Suporte, sendo Configurações e Suporte ilustrativo.
+
+## Painel
+	1. Visão Geral
+		- Total de clientes: Deverá trazer a quantidade de registros do endpoint GET /api/1/users
+		- Clientes Inadimplentes: Deverá trazer a quantidade de clientes com status = 1 do endpoint GET /api/1/users
+		- Clientes Adimplentes: Deverá trazer a quantidade de clientes com status = 0 do endpoint GET /api/1/users
+		- Total arrecadado: Deverá trazer somatória total dos Adimplentes status = 0 do campo amount do endpoint GET /api/1/users
+
+	2. Clientes cadastrados
+	 	- Listagem dos clientes: Deverá trazer todos os registros do endpoint GET /api/1/users
+	 	- Paginação: Paginar usuários limitando à 10 cadastros por página, os registros do endpoint GET /api/1/users
