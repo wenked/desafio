@@ -117,7 +117,7 @@ GET /api/1/users?offset=10 = Indica o início da leitura à partir do registro 1
 
 - Faça o uso de componentes de forma genérica e escalável;
 
-- Utilize algum pré-processador para o seu css, de preferência [SASS](https://sass-lang.com/). (Se quiser, fique a vontade para usar alguma lib/framework CSS);
+- Utilize algum pré-processador para o seu css, de preferência [SASS](https://sass-lang.com/).
 
 - Faça com que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando;
 
@@ -128,7 +128,7 @@ GET /api/1/users?offset=10 = Indica o início da leitura à partir do registro 1
 ### Desejável
 - Utilizar [ReduxJS](https://redux.js.org/) para controle de estado dos componentes;
 
-- Utilizar a lib [Ant Design](https://ant.design) para construção dos componentes necessários.
+- Utilizar a lib [Ant Design 3x](https://3x.ant.design) para construção dos componentes necessários.
   
 ### Avaliação
 
