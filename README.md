@@ -127,6 +127,8 @@ GET /api/1/users?offset=10 = Indica o início da leitura à partir do registro 1
 - Utilizar [ReduxJS](https://redux.js.org/) para controle de estado dos componentes;
 
 - Utilizar a lib [Ant Design 3x](https://3x.ant.design) para construção dos componentes necessários.
+
+- Utilizar [TypeScript](https://www.typescriptlang.org/) para tipagem da linguagem;
   
 ### Avaliação
 
