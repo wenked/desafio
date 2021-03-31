@@ -7,15 +7,16 @@
 }
 
 .data-box {
-	padding: 4px;
 	margin: 0 auto;
-	width: 300px;
+	width: 250px;
+	height: 125px;
 	border-radius: 10px;
 	box-shadow: 5px 8px 8px #bfbdc1;
 
 	.ant-card-head-title {
 		font-size: 18px;
 		font-weight: 400;
+		color: gray;
 	}
 
 	p {

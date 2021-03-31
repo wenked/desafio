@@ -10,8 +10,8 @@ interface DataBoxProps {
 const DataBox: React.FC<DataBoxProps> = ({ label, data }) => {
 	return (
 		<div className='databox-container'>
-			<Card className='data-box' title='teste'>
-				<p>1234</p>
+			<Card className='data-box' title={label}>
+				<p>{data}</p>
 			</Card>
 		</div>
 	);

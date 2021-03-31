@@ -24,12 +24,18 @@ export interface UserByQueryInterface {
 export interface UsersInitialStateInterface {
 	users: UserInterface[] | null;
 	status: string;
-	AdimplenteTotal: number;
-	Inadimplentes: number;
-	Adimplentes: number;
 }
 
 export interface initialStateInterface {
 	user: UserInterface | undefined;
 	status: string;
+}
+
+export interface DataGroupInterface {
+	AdimplenteTotal: number;
+	Inadimplentes: number;
+	Adimplentes: number;
+	total: number;
+	status: string;
+	users: UserInterface[] | null;
 }

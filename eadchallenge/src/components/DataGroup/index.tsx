@@ -1,30 +1,30 @@
 import { Spin, Typography } from 'antd';
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { RootUsersState } from '../../redux/store';
+import { RootUserDataGroup } from '../../redux/store';
 import DataBox from '../DataBox';
+import TitleComponent from '../TitleComponent';
 import './styles.scss';
 
 const DataGroup: React.FC = () => {
-	const users = useSelector((state: RootUsersState) => state.users);
+	const dataGroup = useSelector((state: RootUserDataGroup) => state.dataGroup);
 
 	return (
 		<div className='data-container'>
-			<Typography.Title className='title-label' level={5}>
-				Visão dos clientes
-			</Typography.Title>
+			<TitleComponent title='Visão dos clientes' />
 			<div className='data-items'>
+				<DataBox label='Total de clientes' data={dataGroup.total.toString()} />
 				<DataBox
-					label='Total de clientes'
-					data={users.users?.length.toString()}
+					label='Clientes inadimplentes'
+					data={dataGroup.Inadimplentes.toString()}
 				/>
 				<DataBox
 					label='Clientes inadimplentes'
-					data={users.Inadimplentes.toString()}
+					data={dataGroup.Adimplentes.toString()}
 				/>
 				<DataBox
 					label='Clientes adimplentes'
-					data={`R$${users.AdimplenteTotal.toString()}`}
+					data={`R$${dataGroup.AdimplenteTotal.toFixed(2).toString()}`}
 				/>
 			</div>
 		</div>

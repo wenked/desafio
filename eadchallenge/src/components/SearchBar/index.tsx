@@ -13,7 +13,7 @@ const SearchBar: React.FC = () => {
 		<div className='searchbox-container'>
 			<Input.Search
 				onSearch={(value) => {
-					//dispatch(getUserByQuery(value));
+					dispatch(getUserByQuery(value));
 					router.push('/user');
 				}}
 				placeholder='Email ou nome'

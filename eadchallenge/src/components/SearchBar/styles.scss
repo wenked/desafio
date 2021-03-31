@@ -6,9 +6,10 @@
 	padding-top: 10px;
 
 	@media screen and (min-width: 960px) {
+		width: 800px;
 		margin: 0 auto;
 		.input-search {
-			width: 800px;
+			width: 100%;
 		}
 	}
 }

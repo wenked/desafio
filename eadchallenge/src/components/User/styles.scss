@@ -1,0 +1,24 @@
+.user-container {
+	background-color: white;
+	border-radius: 5px;
+	padding: 20px;
+	width: 300px;
+	margin: 20px;
+	@media (min-width: 960px) {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.user-item {
+	padding: 2px;
+
+	@media screen and (min-width: 960px) {
+		img {
+			width: 50px;
+		}
+	}
+}
