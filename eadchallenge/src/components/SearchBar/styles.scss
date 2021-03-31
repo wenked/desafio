@@ -1,0 +1,14 @@
+.searchbox-container {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	margin-left: 60px;
+	padding-top: 10px;
+
+	@media screen and (min-width: 960px) {
+		margin: 0 auto;
+		.input-search {
+			width: 800px;
+		}
+	}
+}

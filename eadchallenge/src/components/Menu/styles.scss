@@ -1,0 +1,33 @@
+@import '../../styles/config';
+
+.menu-container {
+	width: 256px;
+	height: 100vh;
+
+	@media screen and (max-width: 960px) {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		top: 60px;
+		opacity: 1;
+		transition: all 0.5s ease;
+		background: $maincolor;
+		color: white;
+	}
+}
+
+.menu-item {
+	&:hover {
+		border-left: 3px solid $maincolor;
+		background-color: transparent;
+		color: $maincolor;
+	}
+
+	@media screen and (max-width: 960px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
