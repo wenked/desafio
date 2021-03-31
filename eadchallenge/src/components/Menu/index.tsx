@@ -9,22 +9,20 @@ interface MenuProps {
 
 const Menu: React.FC<MenuProps> = ({ click }) => {
 	return (
-		<div>
-			<MenuAtd
-				className='menu-container'
-				mode='vertical-left'
-				style={{ left: click ? 0 : '-100%' }}>
-				<MenuAtd.Item className='menu-item' icon={<ControlFilled />}>
-					Painel
-				</MenuAtd.Item>
-				<MenuAtd.Item className='menu-item' icon={<SettingFilled />}>
-					Configurações
-				</MenuAtd.Item>
-				<MenuAtd.Item className='menu-item' icon={<WechatFilled />}>
-					Suporte
-				</MenuAtd.Item>
-			</MenuAtd>
-		</div>
+		<MenuAtd
+			className='menu-container'
+			mode='inline'
+			style={{ left: click ? 0 : '-100%', width: 256 }}>
+			<MenuAtd.Item className='menu-item' icon={<ControlFilled />}>
+				Painel
+			</MenuAtd.Item>
+			<MenuAtd.Item className='menu-item' icon={<SettingFilled />}>
+				Configurações
+			</MenuAtd.Item>
+			<MenuAtd.Item className='menu-item' icon={<WechatFilled />}>
+				Suporte
+			</MenuAtd.Item>
+		</MenuAtd>
 	);
 };
 

@@ -1,0 +1,29 @@
+@import '../../styles/config';
+
+.databox-container {
+	padding: 10px;
+	@media (min-width: 960px) {
+	}
+}
+
+.data-box {
+	padding: 4px;
+	margin: 0 auto;
+	width: 300px;
+	border-radius: 10px;
+	box-shadow: 5px 8px 8px #bfbdc1;
+
+	.ant-card-head-title {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	p {
+		font-size: 18px;
+		font-weight: 700;
+		color: $maincolor;
+	}
+
+	@media (min-width: 960px) {
+	}
+}

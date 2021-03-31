@@ -1,0 +1,31 @@
+@import '../../styles/config';
+
+.data-container {
+	display: block;
+	align-items: center;
+
+	@media screen and (min-width: 960px) {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.title-label {
+	border-left: 3px solid $maincolor;
+	padding: 10px;
+	font-weight: 500;
+	margin: 10px;
+}
+
+.loading-container {
+	display: flex;
+	justify-content: center;
+	margin: 50px;
+	i {
+		background-color: $maincolor;
+	}
+
+	@media screen and (min-width: 960px) {
+		margin: 10px;
+	}
+}

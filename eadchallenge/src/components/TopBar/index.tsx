@@ -17,13 +17,12 @@ const TopBar: React.FC<TopBarProps> = ({ click, setClick }) => {
 	const { user } = useSelector((state: RootUserState) => state.user);
 	useEffect(() => {
 		dispatch(getUserById(1));
-		console.log(user);
 	}, [dispatch]);
 
 	return (
 		<div className='topbar-container'>
 			<div className='mobile-button' onClick={() => setClick(!click)}>
-				{click ? (
+				{!click ? (
 					<Button icon={<MenuOutlined />} />
 				) : (
 					<Button icon={<CloseOutlined />} />

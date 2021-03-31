@@ -1,0 +1,9 @@
+.content-container {
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (min-width: 960px) {
+		display: grid;
+		grid-template-columns: 1fr 5fr;
+	}
+}

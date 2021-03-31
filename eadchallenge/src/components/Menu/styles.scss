@@ -1,9 +1,7 @@
 @import '../../styles/config';
 
 .menu-container {
-	width: 256px;
 	height: 100vh;
-
 	@media screen and (max-width: 960px) {
 		display: flex;
 		flex-direction: column;
