@@ -27,3 +27,4 @@ https://desafio.eadplataforma.com/api/1
 ```
 
 A página é uma dashboard que mostra todos os usários , e também pode se pesquisar usuários por nome e email.
+(pode precisar ativar o demoserver do https://cors-anywhere.herokuapp.com/corsdemo para rodar localmente)
