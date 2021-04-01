@@ -1,4 +1,3 @@
-import { Spin, Typography } from 'antd';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootUserDataGroup } from '../../redux/store';

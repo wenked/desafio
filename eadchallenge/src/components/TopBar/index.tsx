@@ -1,5 +1,5 @@
 import { Avatar, Button } from 'antd';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootToggleState, RootUserState } from '../../redux/store';
 import { getUserById } from '../../redux/userSlice';

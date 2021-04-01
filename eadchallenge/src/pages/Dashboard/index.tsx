@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import DataGroup from '../../components/DataGroup';
+import { useDispatch } from 'react-redux';
+
 import Menu from '../../components/Menu';
 import TopBar from '../../components/TopBar';
 
@@ -9,7 +9,6 @@ import { getAllUsers } from '../../redux/usersSlice';
 import './styles.scss';
 import Routes from '../../routes';
 import { getAllData } from '../../redux/dataGroupSlice';
-import { RootToggleState } from '../../redux/store';
 
 const Dashboard: React.FC = () => {
 	const [click, setClick] = useState(false);

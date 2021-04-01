@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '../service/api';
-import { UserByQueryInterface, UserInterface } from '../types/dataTypes';
+import { UserByQueryInterface } from '../types/dataTypes';
 
 export const getUserByQuery = createAsyncThunk(
 	'userByQuery/getUserByQuery',

@@ -1,4 +1,4 @@
-import { Card, Typography } from 'antd';
+import { Card } from 'antd';
 import React from 'react';
 import './styles.scss';
 
