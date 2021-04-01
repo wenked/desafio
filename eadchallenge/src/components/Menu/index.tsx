@@ -20,9 +20,16 @@ const Menu: React.FC<MenuProps> = ({ click, setClick }) => {
 		<MenuAtd
 			className='menu-container'
 			mode='inline'
-			style={{ left: toggleClick ? 0 : '-100%', width: 256 }}>
+			style={{ left: toggleClick ? 0 : '-100%' }}>
 			<MenuAtd.Item className='menu-item' icon={<ControlFilled />}>
-				<Link to='/' onClick={() => dispatch(toggle())}>
+				<Link
+					style={{ textDecoration: 'none', color: 'inherit' }}
+					to='/'
+					onClick={() => {
+						if (window.innerWidth <= 960) {
+							dispatch(toggle());
+						}
+					}}>
 					Painel
 				</Link>
 			</MenuAtd.Item>

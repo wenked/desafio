@@ -22,6 +22,12 @@
 .mobile-button {
 	margin-top: 10px;
 	margin-left: 10px;
+	button {
+		background-color: $maincolor;
+		&:focus {
+			border-color: white;
+		}
+	}
 	@media screen and (min-width: 960px) {
 		display: none;
 	}

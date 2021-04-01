@@ -1,22 +1,19 @@
 @import '../../styles/config';
 .container {
 	display: block;
-	@media (min-width: 960px) {
+	@media screen and (min-width: 960px) {
 		width: 900px;
 		flex: 1;
 	}
 }
 
 .pag-container {
-	display: inline-flex;
-}
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
 
-.pag-button {
-	margin: 10px;
-	.ant-btn {
-		border-radius: 5px;
-
-		&:hover {
+	li {
+		&:active:hover {
 			color: $maincolor;
 			border-color: $maincolor;
 		}

@@ -2,6 +2,7 @@
 
 .menu-container {
 	height: 100vh;
+	width: 256px;
 	@media screen and (max-width: 960px) {
 		display: flex;
 		flex-direction: column;

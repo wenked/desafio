@@ -1,16 +1,17 @@
-import { Button } from 'antd';
+import { Pagination } from 'antd';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootToggleState, RootUsersState } from '../../redux/store';
 import { getAllUsers } from '../../redux/usersSlice';
 import DataGroup from '../DataGroup';
+import Loading from '../Loading';
 import TitleComponent from '../TitleComponent';
 import User from '../User';
 import './styles.scss';
 
 const UsersList: React.FC = () => {
 	const dispatch = useDispatch();
-	const [pag, setPag] = useState(0);
+	const [pag, setPag] = useState(1);
 	const users = useSelector((state: RootUsersState) => state.users);
 	const toggleClick = useSelector((state: RootToggleState) => state.toggle);
 
@@ -26,34 +27,22 @@ const UsersList: React.FC = () => {
 				))}
 			</div>
 			<div className='pag-container'>
-				<div className='pag-button'>
-					<Button
-						onClick={() => {
-							if (pag >= 0) {
-								setPag(pag - 10);
-								dispatch(getAllUsers(pag));
-							} else {
-								setPag(0);
-								dispatch(getAllUsers(pag));
-							}
-						}}>
-						Prev
-					</Button>
-				</div>
-				<div className='pag-button'>
-					<Button
-						onClick={() => {
-							setPag(pag + 10);
-							dispatch(getAllUsers(pag));
-						}}>
-						Next
-					</Button>
-				</div>
+				<Pagination
+					total={15}
+					defaultCurrent={1}
+					current={pag}
+					onChange={(page) => {
+						setPag(page);
+						dispatch(getAllUsers((page - 1) * 10));
+					}}
+				/>
 			</div>
 		</div>
 	) : (
-		<div>loading...</div>
+		<Loading />
 	);
 };
+
+// pag 1 -- offset 0 , pag 2 offset 10, pag 3 offset 20
 
 export default UsersList;

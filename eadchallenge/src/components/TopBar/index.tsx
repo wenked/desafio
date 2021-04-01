@@ -30,9 +30,23 @@ const TopBar: React.FC<TopBarProps> = ({ click, setClick }) => {
 					console.log(toggleClick);
 				}}>
 				{!toggleClick ? (
-					<Button icon={<MenuOutlined />} />
+					<Button
+						style={{ backgroundColor: '#43aa8b' }}
+						icon={
+							<MenuOutlined
+								style={{ color: 'white', backgroundColor: '#43aa8b' }}
+							/>
+						}
+					/>
 				) : (
-					<Button icon={<CloseOutlined />} />
+					<Button
+						style={{ backgroundColor: '#43aa8b' }}
+						icon={
+							<CloseOutlined
+								style={{ color: 'white', backgroundColor: '#43aa8b' }}
+							/>
+						}
+					/>
 				)}
 			</div>
 			<SearchBar />
