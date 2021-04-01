@@ -1,7 +1,11 @@
 import { Pagination } from 'antd';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootToggleState, RootUsersState } from '../../redux/store';
+import {
+	RootToggleState,
+	RootUserDataGroup,
+	RootUsersState,
+} from '../../redux/store';
 import { getAllUsers } from '../../redux/usersSlice';
 import DataGroup from '../DataGroup';
 import Loading from '../Loading';
@@ -14,6 +18,7 @@ const UsersList: React.FC = () => {
 	const [pag, setPag] = useState(1);
 	const users = useSelector((state: RootUsersState) => state.users);
 	const toggleClick = useSelector((state: RootToggleState) => state.toggle);
+	const { total } = useSelector((state: RootUserDataGroup) => state.dataGroup);
 
 	return users.status !== 'loading' ? (
 		<div className='container' style={{ display: toggleClick ? 'none' : '' }}>
@@ -28,7 +33,7 @@ const UsersList: React.FC = () => {
 			</div>
 			<div className='pag-container'>
 				<Pagination
-					total={15}
+					total={total}
 					defaultCurrent={1}
 					current={pag}
 					onChange={(page) => {
