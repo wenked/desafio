@@ -17,7 +17,6 @@ const SearchBar: React.FC = () => {
 					router.push('/user');
 				}}
 				placeholder='Email ou nome'
-				enterButton
 				className='input-search'
 			/>
 		</div>
